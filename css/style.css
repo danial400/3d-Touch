@@ -28,6 +28,16 @@ header{
   padding: 0 20px;
 }
 
+.codepen{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background: #f7f7f9;
+  border-bottom-left-radius: 5px;
+  z-index: 100;
+}
+
 .download{
   border-radius: 5px;
   padding: 10px;
@@ -42,6 +52,7 @@ header{
 }
 
 .doc-section{
+  position: relative;
   border: 5px solid #f7f7f9;
   border-radius: 5px;
   margin-bottom: 40px;

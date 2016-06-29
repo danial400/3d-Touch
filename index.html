@@ -100,6 +100,14 @@
               </ul>
             </li>
             <li>
+              <strong>Device:</strong> Apple Pencil on iPad Pro
+              <ul>
+                <li>
+                  <strong>Browser:</strong> <a href="https://github.com/yamartino/pressure/issues/31">Safari</a>, <a href="https://github.com/yamartino/pressure/issues/29">WKWebView</a>
+                </li>
+              </ul>
+            </li>
+            <li>
               <strong>Device:</strong> MacBook 2015 / MacBook Pro 2015
               <ul>
                 <li>
@@ -115,7 +123,7 @@
                 </li>
               </ul>
             </li>
-            <li class="text-danger">future devices and browser that support pressure will be added when they come out</li>
+            <li class="text-danger">future devices and browser that support pressure will be added when they are released</li>
           </ul>
           <hr>
           <p>If you are not using one of the devices / browsers listed above, here is a gif to show it in action.</p>
@@ -128,6 +136,7 @@
           <div class="h4 doc-title">1. Pressure Change</div>
           <p>The best part about Pressure is that is uses a single API that works on both Force Touch and 3D Touch. (note: Apple currently only has support for desktop and mobile safari, but luckily with pressure you can test for that)</p>
           <div class="doc-section">
+            <a class="codepen" href="http://codepen.io/Yamartino/pen/EyPwMw" target="new">Play on Codepen</a>
             <div class="doc-top">
               <h4>Targets All</h4>
               <div class="element" id="el1">0</div>
@@ -141,11 +150,12 @@
             </div> -->
           </div>
 
-          <div class="h4 doc-title">2. Unblur Photo</div>
+          <div class="h4 doc-title">2. Focus Photo</div>
           <p>The harder you press on the image the less blurry it will become.</p>
+          <p>(try pressing with variable amounts of pressure)</p>
           <div class="doc-section">
+            <a class="codepen" href="http://codepen.io/Yamartino/pen/JKGBaw" target="new">Play on Codepen</a>
             <div class="doc-top">
-              <p>(try pressing with variable amounts of pressure)</p>
               <div class="wrap-peanuts">
                 <img src="peanuts.jpg" id="peanuts"/>
               </div>
@@ -156,8 +166,9 @@
           </div>
 
           <div class="h4 doc-title">3. Text Size</div>
-          <p>The harder you press on the text, the bigger it gets. This could be useful for accessibility on online articles.
+          <p>The harder you press on the text, the bigger it gets. Then when you let go it sticks at that size till the next time you press. This could be useful for accessibility on online articles.
           <div class="doc-section">
+            <a class="codepen" href="http://codepen.io/Yamartino/pen/OXMwrX" target="new">Play on Codepen</a>
             <div class="doc-top">
               <div id="text-sizer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </div>
@@ -167,9 +178,10 @@
           <div class="h4 doc-title">4. Rotating Square</div>
           <p>The harder you press on the button, the farther the image will spin.
           <div class="doc-section">
+            <a class="codepen" href="http://codepen.io/Yamartino/pen/EyPwMw" target="new">Play on Codepen</a>
             <div class="doc-top">
               <button id="cube-btn" class="btn btn-success btn-lg">Press Me!</button>
-              <p>(try pressing with variable amounts of pressure)</p>
+              <br/>
               <br/>
               <br/>
               <img id="spinning-cube" src="pickle.jpg"/>
@@ -179,6 +191,7 @@
           <div class="h4 doc-title">5. "Deep" or Force Press</div>
           <p>Press hard on the button, a "Deep" or Force press will occur and launch a bootstrap popover.
           <div class="doc-section">
+            <a class="codepen" href="http://codepen.io/Yamartino/pen/EyPwMw" target="new">Play on Codepen</a>
             <div class="doc-top">
               <button id="popover" type="button" class="btn btn-lg btn-danger" data-placement="top" data-toggle="popover" title="Deep Press Popover!" data-content='This popover was triggered because you pressed over 50% pressure on iOS or OSX. On OSX this is called a "force touch"'>Press hard to toggle popover</button>
             </div>
@@ -415,7 +428,7 @@ Pressure.set('#stuart', {
           <div class="alert alert-warning">
             <strong>Heads Up:</strong> If you have a config set, you can always overide the config on individual Pressure elements by passing in any of the options listed above to a specific Pressure block.
           </div>
-          <div class="alert alert-success">When using the jQuery Pressure library, use <code>$.pressureConfig()</code> rather than <code>Pressure.map()</code></div>
+          <div class="alert alert-success">When using the jQuery Pressure library, use <code>$.pressureConfig()</code> rather than <code>Pressure.config()</code></div>
           <div class="doc-section">
             <div class="doc-bottom">
               <pre class="language-javascript"><code>// These are the default configs set by Pressure
